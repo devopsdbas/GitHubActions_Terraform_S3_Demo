@@ -18,10 +18,10 @@ jobs:
         - name: Checkout                                   
           uses: actions/checkout@v3
     # Runs a single command using the runners shell     
-        - name: 'Terraform init' 
+        - name: 'Initialize Teraform' 
           id: init                                   
           run: |
-            terraform init                           
+            terraform init  -reconfigure                         
 
         - name: Set up Terraform
           uses: hashicorp/setup-terraform@v1
